@@ -86,6 +86,24 @@ a {
   background: rgba(255, 255, 255, 0.12);
 }
 
+/* On phones, pin the language button to the corner so the subtitle can use the full width. */
+@media (max-width: 480px) {
+  .app-header {
+    display: block;
+    position: relative;
+  }
+
+  .app-header h1 {
+    padding-right: 96px;
+  }
+
+  .language-toggle {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+  }
+}
+
 .app-header h1 {
   margin: 0;
   font-size: 1.35rem;
