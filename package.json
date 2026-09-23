@@ -1,0 +1,25 @@
+{
+  "name": "london-resource-map",
+  "private": true,
+  "version": "1.0.0",
+  "description": "An interactive map of free food, shelter, health and community services in London, Ontario.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "geocode": "node scripts/geocode.mjs"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-leaflet": "^5.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.1",
+    "vite": "^8.3.0",
+    "vitest": "^5.0.1"
+  }
+}

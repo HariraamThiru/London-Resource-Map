@@ -1,0 +1,381 @@
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --text: #1f2328;
+  --muted: #57606a;
+  --border: #d0d7de;
+  --link: #0b5cad;
+  --focus: #f59e0b;
+  --header-bg: #0f3d5e;
+  --banner-bg: #fff1f0;
+  --banner-border: #f3c2bd;
+  --banner-text: #7a1c14;
+  --radius: 10px;
+
+  color-scheme: light;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.45;
+  color: var(--text);
+  background: var(--bg);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+a {
+  color: var(--link);
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Page frame */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  background: var(--header-bg);
+  color: #ffffff;
+  padding: 14px 20px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.app-header p {
+  margin: 2px 0 0;
+  color: #d6e4f0;
+  font-size: 0.95rem;
+}
+
+.help-banner {
+  background: var(--banner-bg);
+  color: var(--banner-text);
+  border-bottom: 1px solid var(--banner-border);
+  padding: 8px 20px;
+  font-size: 0.92rem;
+}
+
+.help-banner p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  margin: 0;
+}
+
+.help-banner a {
+  color: inherit;
+  font-weight: 700;
+}
+
+/* Layout: filters, map and results. Side by side on wide screens, stacked on phones. */
+
+.layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(320px, 420px) 1fr;
+  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-areas:
+    'filters map'
+    'results map';
+  min-height: 0;
+}
+
+.filters {
+  grid-area: filters;
+  padding: 16px 20px 4px;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+}
+
+.results {
+  grid-area: results;
+  /* Keeps the visually hidden labels inside the scrolling list, so they can't stretch the page. */
+  position: relative;
+  overflow-y: auto;
+  padding: 0 20px 20px;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+}
+
+.map-panel {
+  grid-area: map;
+  position: relative;
+  min-height: 0;
+}
+
+.map {
+  position: absolute;
+  inset: 0;
+}
+
+@media (min-width: 900px) {
+  /* The list and the map scroll separately, so the map always stays in view. */
+  .app {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 899px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'filters'
+      'map'
+      'results';
+  }
+
+  .filters,
+  .results {
+    border-right: 0;
+  }
+
+  .filters {
+    padding-bottom: 14px;
+  }
+
+  .map-panel {
+    height: 55vh;
+    scroll-margin-top: 8px;
+  }
+
+  .results {
+    overflow: visible;
+    padding-top: 4px;
+  }
+}
+
+/* Search and category filters */
+
+.search {
+  display: block;
+}
+
+.search__label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.search input {
+  width: 100%;
+  padding: 9px 12px;
+  font: inherit;
+  border: 1px solid #8c959f;
+  border-radius: 8px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.chip {
+  --chip-color: #24292f;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  font: inherit;
+  font-size: 0.88rem;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.chip:hover {
+  border-color: var(--chip-color);
+}
+
+.chip[aria-pressed='true'] {
+  color: #ffffff;
+  background: var(--chip-color);
+  border-color: var(--chip-color);
+}
+
+.chip__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--chip-color);
+}
+
+.chip[aria-pressed='true'] .chip__dot {
+  background: #ffffff;
+}
+
+.chip__count {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.chip[aria-pressed='true'] .chip__count {
+  color: inherit;
+}
+
+/* Results list */
+
+.results-count {
+  margin: 10px 0 12px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.resource-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  padding: 12px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  scroll-margin: 12px;
+}
+
+.card--selected {
+  border-color: var(--link);
+  box-shadow: inset 0 0 0 1px var(--link);
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--badge-color);
+  border-radius: 999px;
+}
+
+.card__title {
+  margin: 6px 0 4px;
+  font-size: 1.02rem;
+}
+
+.card__title button {
+  padding: 0;
+  font: inherit;
+  text-align: left;
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.card__description {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.empty {
+  color: var(--muted);
+}
+
+.disclaimer {
+  margin: 18px 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* Details shared by the list cards and the map popups */
+
+.details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2px 10px;
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+}
+
+.details dt {
+  color: var(--muted);
+}
+
+.details dd {
+  margin: 0;
+}
+
+.details__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.details__meta {
+  margin: 6px 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* Map popups */
+
+.leaflet-container {
+  font: inherit;
+}
+
+.leaflet-popup-content {
+  margin: 12px 14px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.leaflet-popup-content p {
+  margin: 8px 0 0;
+}
+
+.popup__title {
+  display: block;
+  font-size: 1rem;
+}
+
+.popup__category {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
