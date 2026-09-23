@@ -1,4 +1,4 @@
-export const REPO_URL = 'https://github.com/HariraamThiru/london-resource-map'
+export const REPO_URL = 'https://github.com/HariraamThiru/London-Resource-Map'
 
 export function directionsUrl(address) {
   return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`

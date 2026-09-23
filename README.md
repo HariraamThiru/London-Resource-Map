@@ -2,7 +2,7 @@
 
 An interactive map of free and low-cost food, shelter, health, mental health and community services in London, Ontario, in English and French.
 
-**Live site:** https://hariraamthiru.github.io/london-resource-map/ ([en français](https://hariraamthiru.github.io/london-resource-map/?lang=fr))
+**Live site:** https://hariraamthiru.github.io/London-Resource-Map/ ([en français](https://hariraamthiru.github.io/London-Resource-Map/?lang=fr))
 
 ![The service list beside a map of London, Ontario with color-coded markers for each category](docs/screenshot.png)
 
@@ -45,7 +45,7 @@ The details come from [Information London](https://www.informationlondon.ca), a 
 
 Shelters that keep their locations private for safety are left off the map on purpose. The app directs people to 211 instead.
 
-Anyone can [suggest an update](https://github.com/HariraamThiru/london-resource-map/issues/new?template=suggest-update.yml) through a GitHub issue form. It needs a free GitHub account.
+Anyone can [suggest an update](https://github.com/HariraamThiru/London-Resource-Map/issues/new?template=suggest-update.yml) through a GitHub issue form. It needs a free GitHub account.
 
 This is a student project and isn't affiliated with any of the organizations listed.
 
@@ -66,7 +66,7 @@ npm install
 npm run dev
 ```
 
-Then open http://localhost:5173/london-resource-map/.
+Then open http://localhost:5173/London-Resource-Map/.
 
 ```bash
 npm test
