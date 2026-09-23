@@ -1,9 +1,13 @@
 import { useEffect, useRef } from 'react'
+import { useLanguage } from '../i18n/LanguageContext.jsx'
 import { CATEGORY_BY_ID } from '../lib/categories.js'
+import { formatDistance } from '../lib/format.js'
 import { isWideScreen } from '../lib/layout.js'
+import OpenStatus from './OpenStatus.jsx'
 import ResourceDetails from './ResourceDetails.jsx'
 
-export default function ResourceList({ resources, selection, onSelect }) {
+export default function ResourceList({ resources, selection, onSelect, now, distances, emptyMessage }) {
+  const { locale, t, localize } = useLanguage()
   const cardRefs = useRef(new Map())
 
   // When someone clicks a marker, bring its card into view. Only on wide screens:
@@ -15,7 +19,7 @@ export default function ResourceList({ resources, selection, onSelect }) {
   }, [selection])
 
   if (resources.length === 0) {
-    return <p className="empty">No services match. Try a different word or category.</p>
+    return <p className="empty">{emptyMessage}</p>
   }
 
   return (
@@ -33,16 +37,24 @@ export default function ResourceList({ resources, selection, onSelect }) {
             }}
             className={isSelected ? 'card card--selected' : 'card'}
           >
-            <span className="badge" style={{ '--badge-color': category.color }}>
-              {category.label}
-            </span>
+            <div className="card__meta">
+              <span className="badge" style={{ '--badge-color': category.color }}>
+                {t.categories[resource.category]}
+              </span>
+              <OpenStatus hours={resource.hours} now={now} />
+              {distances && (
+                <span className="distance">
+                  {t.distanceAway(formatDistance(distances.get(resource.id), locale))}
+                </span>
+              )}
+            </div>
             <h3 className="card__title">
               <button type="button" onClick={() => onSelect(resource.id)}>
                 {resource.name}
-                <span className="visually-hidden"> (show on map)</span>
+                <span className="visually-hidden"> {t.showOnMap}</span>
               </button>
             </h3>
-            <p className="card__description">{resource.description}</p>
+            <p className="card__description">{localize(resource.description)}</p>
             <ResourceDetails resource={resource} />
           </li>
         )

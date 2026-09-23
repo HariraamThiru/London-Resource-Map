@@ -6,27 +6,33 @@ const resources = [
     id: 'food-bank',
     name: 'Downtown Food Bank',
     category: 'food',
-    description: 'Groceries for families.',
     address: '1 Main St, London, ON',
-    tags: ['groceries'],
+    description: { en: 'Groceries for families.', fr: 'Épicerie pour les familles.' },
+    tags: { en: ['groceries'], fr: ['épicerie'] },
+    hours: { mon: ['09:00-16:00'] },
   },
   {
     id: 'night-shelter',
     name: 'Night Shelter',
     category: 'shelter',
-    description: 'Beds and hot meals.',
     address: '2 King St, London, ON',
-    tags: ['meals', 'showers'],
+    description: { en: 'Beds and hot meals.', fr: 'Lits et repas chauds.' },
+    tags: { en: ['meals', 'showers'], fr: ['repas', 'douches'] },
+    hours: 'always',
   },
   {
     id: 'library',
     name: 'Central Library',
     category: 'community',
-    description: 'Free Wi-Fi and computers.',
     address: '3 Queen St, London, ON',
-    tags: ['wifi'],
+    description: { en: 'Free Wi-Fi and computers.', fr: 'Wi-Fi gratuit et ordinateurs.' },
+    tags: { en: ['wifi'], fr: ['wifi'] },
+    hours: null,
   },
 ]
+
+const MONDAY_10_AM = { day: 'mon', minutes: 10 * 60 }
+const MONDAY_8_PM = { day: 'mon', minutes: 20 * 60 }
 
 const ids = (list) => list.map((resource) => resource.id)
 
@@ -48,8 +54,14 @@ describe('filterResources', () => {
     expect(ids(filterResources(resources, { query: 'wifi' }))).toEqual(['library'])
   })
 
-  it('matches category names', () => {
+  it('matches category names in either language', () => {
     expect(ids(filterResources(resources, { query: 'community' }))).toEqual(['library'])
+    expect(ids(filterResources(resources, { query: 'hébergement' }))).toEqual(['night-shelter'])
+  })
+
+  it('matches French words, with or without accents', () => {
+    expect(ids(filterResources(resources, { query: 'repas' }))).toEqual(['night-shelter'])
+    expect(ids(filterResources(resources, { query: 'epicerie' }))).toEqual(['food-bank'])
   })
 
   it('requires every word to match', () => {
@@ -66,5 +78,13 @@ describe('filterResources', () => {
 
   it('ignores blank search text', () => {
     expect(filterResources(resources, { query: '   ' })).toHaveLength(3)
+  })
+
+  it('keeps only services known to be open at the given time', () => {
+    expect(ids(filterResources(resources, { openAt: MONDAY_10_AM }))).toEqual([
+      'food-bank',
+      'night-shelter',
+    ])
+    expect(ids(filterResources(resources, { openAt: MONDAY_8_PM }))).toEqual(['night-shelter'])
   })
 })

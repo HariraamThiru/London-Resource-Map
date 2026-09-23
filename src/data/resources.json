@@ -3,18 +3,56 @@
     "id": "london-food-bank",
     "name": "London Food Bank",
     "category": "food",
-    "description": "Free groceries for individuals and families. Saturday mornings are reserved for college and university students.",
-    "eligibility": "Anyone in need. Bring photo ID for each family member at every visit (students: a student card).",
+    "description": {
+      "en": "Free groceries for individuals and families. Saturday mornings are reserved for college and university students.",
+      "fr": "Épicerie gratuite pour les personnes et les familles. Le samedi matin est réservé aux étudiants des collèges et des universités."
+    },
+    "eligibility": {
+      "en": "Anyone in need. Bring photo ID for each family member at every visit (students: a student card).",
+      "fr": "Toute personne dans le besoin. Apportez une pièce d’identité avec photo pour chaque membre de la famille à chaque visite (étudiants : carte étudiante)."
+    },
     "address": "926 Leathorne St, London, ON N5Z 3M5",
-    "hours": "Mon–Fri 9 am–4 pm; Sat 9–11 am (post-secondary students only)",
+    "hours": {
+      "mon": [
+        "09:00-16:00"
+      ],
+      "tue": [
+        "09:00-16:00"
+      ],
+      "wed": [
+        "09:00-16:00"
+      ],
+      "thu": [
+        "09:00-16:00"
+      ],
+      "fri": [
+        "09:00-16:00"
+      ],
+      "sat": [
+        "09:00-11:00"
+      ]
+    },
+    "hoursNote": {
+      "en": "Saturday hours are for post-secondary students only.",
+      "fr": "Le samedi est réservé aux étudiants du postsecondaire."
+    },
     "phone": "519-659-4045",
     "website": "https://www.londonfoodbank.ca",
-    "tags": [
-      "groceries",
-      "food bank",
-      "students",
-      "families"
-    ],
+    "tags": {
+      "en": [
+        "groceries",
+        "food bank",
+        "students",
+        "families"
+      ],
+      "fr": [
+        "épicerie",
+        "banque alimentaire",
+        "nourriture",
+        "étudiants",
+        "familles"
+      ]
+    },
     "source": "https://www.informationlondon.ca/Services/basic_needs/Display/13440/London_Food_Bank",
     "lastChecked": "2026-09-23",
     "lat": 42.961589,
@@ -24,21 +62,65 @@
     "id": "st-joes-cafe",
     "name": "St. Joe's Cafe",
     "category": "food",
-    "description": "Drop-in breakfast (50¢) and lunch ($1), plus clothing, bread and pet food when available.",
-    "eligibility": "Drop in. Children must be with an adult.",
+    "description": {
+      "en": "Drop-in breakfast (50¢) and lunch ($1), plus clothing, bread and pet food when available.",
+      "fr": "Déjeuner (0,50 $) et dîner (1 $) sans rendez-vous, ainsi que des vêtements, du pain et de la nourriture pour animaux selon les disponibilités."
+    },
+    "eligibility": {
+      "en": "Drop in. Children must be with an adult.",
+      "fr": "Sans rendez-vous. Les enfants doivent être accompagnés d’un adulte."
+    },
     "address": "602 Queens Ave, Unit 101, London, ON N6B 1Y8",
-    "hours": "Mon–Fri 9:30–11 am and 12–1:30 pm; Sat and holidays 11 am–12:45 pm",
+    "hours": {
+      "mon": [
+        "09:30-11:00",
+        "12:00-13:30"
+      ],
+      "tue": [
+        "09:30-11:00",
+        "12:00-13:30"
+      ],
+      "wed": [
+        "09:30-11:00",
+        "12:00-13:30"
+      ],
+      "thu": [
+        "09:30-11:00",
+        "12:00-13:30"
+      ],
+      "fri": [
+        "09:30-11:00",
+        "12:00-13:30"
+      ],
+      "sat": [
+        "11:00-12:45"
+      ]
+    },
+    "hoursNote": {
+      "en": "Also open most holidays, 11 am–12:45 pm (closed Good Friday, Christmas and New Year’s Day).",
+      "fr": "Aussi ouvert la plupart des jours fériés, de 11 h à 12 h 45 (fermé le Vendredi saint, à Noël et au jour de l’An)."
+    },
     "phone": "519-432-0660",
     "website": "https://www.csjcanada.org",
-    "tags": [
-      "meals",
-      "breakfast",
-      "lunch",
-      "clothing",
-      "pet food",
-      "low cost",
-      "St. Joseph's Hospitality Centre"
-    ],
+    "tags": {
+      "en": [
+        "meals",
+        "breakfast",
+        "lunch",
+        "clothing",
+        "pet food",
+        "low cost",
+        "St. Joseph's Hospitality Centre"
+      ],
+      "fr": [
+        "repas",
+        "déjeuner",
+        "dîner",
+        "vêtements",
+        "nourriture pour animaux",
+        "faible coût"
+      ]
+    },
     "source": "https://www.informationlondon.ca/Services/Display/14679/St_Josephs_Hospitality_Centre",
     "lastChecked": "2026-09-23",
     "lat": 42.990136,
@@ -48,21 +130,64 @@
     "id": "ark-aid-street-mission",
     "name": "Ark Aid Street Mission",
     "category": "food",
-    "description": "Free drop-in meals, plus counselling, clothing, hygiene supplies, and help with housing and jobs.",
-    "eligibility": "People facing poverty, homelessness or other barriers.",
+    "description": {
+      "en": "Free drop-in meals, plus counselling, clothing, hygiene supplies, and help with housing and jobs.",
+      "fr": "Repas gratuits sans rendez-vous, ainsi que du counseling, des vêtements, des articles d’hygiène et de l’aide pour le logement et l’emploi."
+    },
+    "eligibility": {
+      "en": "People facing poverty, homelessness or other barriers.",
+      "fr": "Personnes qui vivent la pauvreté, l’itinérance ou d’autres obstacles."
+    },
     "address": "696 Dundas St, London, ON N5W 2Z4",
-    "hours": "Drop-in Mon–Fri 4–8 pm; Sat–Sun 1–8 pm",
+    "hours": {
+      "mon": [
+        "16:00-20:00"
+      ],
+      "tue": [
+        "16:00-20:00"
+      ],
+      "wed": [
+        "16:00-20:00"
+      ],
+      "thu": [
+        "16:00-20:00"
+      ],
+      "fri": [
+        "16:00-20:00"
+      ],
+      "sat": [
+        "13:00-20:00"
+      ],
+      "sun": [
+        "13:00-20:00"
+      ]
+    },
+    "hoursNote": {
+      "en": "Drop-in hours.",
+      "fr": "Heures d’accueil sans rendez-vous."
+    },
     "phone": "519-667-0322",
     "website": "https://arkaidmission.ca",
-    "tags": [
-      "meals",
-      "dinner",
-      "clothing",
-      "hygiene",
-      "counselling",
-      "housing help",
-      "jobs"
-    ],
+    "tags": {
+      "en": [
+        "meals",
+        "dinner",
+        "clothing",
+        "hygiene",
+        "counselling",
+        "housing help",
+        "jobs"
+      ],
+      "fr": [
+        "repas",
+        "souper",
+        "vêtements",
+        "hygiène",
+        "counseling",
+        "logement",
+        "emploi"
+      ]
+    },
     "source": "https://www.informationlondon.ca/services/groups/display/12281/ark_aid_street_mission",
     "lastChecked": "2026-09-23",
     "lat": 42.98976,
@@ -72,21 +197,49 @@
     "id": "usc-food-support",
     "name": "Western USC Food Support Services",
     "category": "food",
-    "description": "Free on-campus food bank. Take what you need, or ask about the confidential hamper service.",
-    "eligibility": "Western University undergraduate students.",
+    "description": {
+      "en": "Free on-campus food bank. Take what you need, or ask about the confidential hamper service.",
+      "fr": "Banque alimentaire gratuite sur le campus. Prenez ce dont vous avez besoin ou renseignez-vous sur le service confidentiel de paniers."
+    },
+    "eligibility": {
+      "en": "Western University undergraduate students.",
+      "fr": "Étudiants de premier cycle de l’Université Western."
+    },
     "address": "University Community Centre, Room 40F, 1151 Richmond St, London, ON N6A 3K7",
     "geocodeQuery": "Concrete Beach (UCC), London, Ontario",
-    "hours": "Mon–Thu 10 am–4 pm",
+    "hours": {
+      "mon": [
+        "10:00-16:00"
+      ],
+      "tue": [
+        "10:00-16:00"
+      ],
+      "wed": [
+        "10:00-16:00"
+      ],
+      "thu": [
+        "10:00-16:00"
+      ]
+    },
     "website": "https://westernusc.ca/services/food-support-services/",
-    "tags": [
-      "students",
-      "groceries",
-      "food bank",
-      "campus",
-      "Western",
-      "UWO",
-      "hamper"
-    ],
+    "tags": {
+      "en": [
+        "students",
+        "groceries",
+        "food bank",
+        "campus",
+        "Western",
+        "UWO",
+        "hamper"
+      ],
+      "fr": [
+        "étudiants",
+        "épicerie",
+        "banque alimentaire",
+        "campus",
+        "paniers"
+      ]
+    },
     "source": "https://westernusc.ca/services/food-support-services/",
     "lastChecked": "2026-09-23",
     "lat": 43.008544,
@@ -96,20 +249,36 @@
     "id": "centre-of-hope",
     "name": "Salvation Army Centre of Hope",
     "category": "shelter",
-    "description": "Emergency shelter that's open around the clock, with transitional housing, withdrawal management and a recovery community centre.",
-    "eligibility": "People experiencing or at risk of homelessness. Call or visit for intake.",
+    "description": {
+      "en": "Emergency shelter that's open around the clock, with transitional housing, withdrawal management and a recovery community centre.",
+      "fr": "Refuge d’urgence ouvert jour et nuit, avec logement de transition, gestion du sevrage et centre communautaire de rétablissement."
+    },
+    "eligibility": {
+      "en": "People experiencing or at risk of homelessness. Call or visit for intake.",
+      "fr": "Personnes en situation d’itinérance ou à risque de l’être. Appelez ou présentez-vous pour l’accueil."
+    },
     "address": "281 Wellington St, London, ON N6B 2L4",
-    "hours": "Open 24 hours, every day",
+    "hours": "always",
     "phone": "519-661-0343",
     "website": "https://www.centreofhope.ca",
-    "tags": [
-      "emergency shelter",
-      "beds",
-      "housing",
-      "addiction",
-      "withdrawal management",
-      "24/7"
-    ],
+    "tags": {
+      "en": [
+        "emergency shelter",
+        "beds",
+        "housing",
+        "addiction",
+        "withdrawal management",
+        "24/7"
+      ],
+      "fr": [
+        "refuge d’urgence",
+        "lits",
+        "logement",
+        "dépendance",
+        "sevrage",
+        "24/7"
+      ]
+    },
     "source": "https://www.informationlondon.ca/services/basic_needs/display/14415/centre_of_hope",
     "lastChecked": "2026-09-23",
     "lat": 42.98108,
@@ -119,20 +288,36 @@
     "id": "mens-mission",
     "name": "Men's Mission (Mission Services of London)",
     "category": "shelter",
-    "description": "111-bed emergency shelter for men, with meals, clothing, hygiene supplies, medical support and help finding housing.",
-    "eligibility": "Men 16 and older experiencing homelessness. No referral needed.",
+    "description": {
+      "en": "111-bed emergency shelter for men, with meals, clothing, hygiene supplies, medical support and help finding housing.",
+      "fr": "Refuge d’urgence de 111 lits pour hommes, avec repas, vêtements, articles d’hygiène, soutien médical et aide à la recherche de logement."
+    },
+    "eligibility": {
+      "en": "Men 16 and older experiencing homelessness. No referral needed.",
+      "fr": "Hommes de 16 ans et plus en situation d’itinérance. Aucune recommandation nécessaire."
+    },
     "address": "459 York St, London, ON N6B 1R3",
-    "hours": "Shelter open 24 hours, every day",
+    "hours": "always",
     "phone": "519-672-8500",
     "website": "https://missionservices.ca",
-    "tags": [
-      "emergency shelter",
-      "beds",
-      "men",
-      "meals",
-      "clothing",
-      "24/7"
-    ],
+    "tags": {
+      "en": [
+        "emergency shelter",
+        "beds",
+        "men",
+        "meals",
+        "clothing",
+        "24/7"
+      ],
+      "fr": [
+        "refuge d’urgence",
+        "lits",
+        "hommes",
+        "repas",
+        "vêtements",
+        "24/7"
+      ]
+    },
     "source": "https://www.informationlondon.ca/Services/Basic_Needs/Display/10250/Mens_Mission",
     "lastChecked": "2026-09-23",
     "lat": 42.984489,
@@ -142,19 +327,36 @@
     "id": "unity-project",
     "name": "Unity Project",
     "category": "shelter",
-    "description": "Emergency shelter with beds, meals and housing support for adults of all genders, with space for couples, pets and people with medical conditions.",
-    "eligibility": "Adults 18+. Admission is by referral from the City of London Coordinated Access team: 519-661-4663.",
+    "description": {
+      "en": "Emergency shelter with beds, meals and housing support for adults of all genders, with space for couples, pets and people with medical conditions.",
+      "fr": "Refuge d’urgence offrant lits, repas et soutien au logement aux adultes de tous les genres, avec de la place pour les couples, les animaux et les personnes ayant des problèmes de santé."
+    },
+    "eligibility": {
+      "en": "Adults 18+. Admission is by referral from the City of London Coordinated Access team: 519-661-4663.",
+      "fr": "Adultes de 18 ans et plus. Admission sur recommandation de l’équipe d’accès coordonné de la Ville de London : 519-661-4663."
+    },
     "address": "717 Dundas St, London, ON N5W 2Z5",
+    "hours": null,
     "phone": "519-433-8700",
     "website": "https://www.unityproject.ca",
-    "tags": [
-      "emergency shelter",
-      "beds",
-      "meals",
-      "couples",
-      "pets",
-      "housing help"
-    ],
+    "tags": {
+      "en": [
+        "emergency shelter",
+        "beds",
+        "meals",
+        "couples",
+        "pets",
+        "housing help"
+      ],
+      "fr": [
+        "refuge d’urgence",
+        "lits",
+        "repas",
+        "couples",
+        "animaux",
+        "logement"
+      ]
+    },
     "source": "https://www.informationlondon.ca/Services/Display/14898/Unity_Project_for_Relief_of_Homelessness_in_London_-_Emergency_Shelter",
     "lastChecked": "2026-09-23",
     "lat": 42.989537,
@@ -164,20 +366,56 @@
     "id": "london-intercommunity-health-centre",
     "name": "London InterCommunity Health Centre",
     "category": "health",
-    "description": "Free primary health care and community programs for people who face barriers to care.",
-    "eligibility": "Varies by program. Serves people with low incomes, newcomers and people with complex health needs.",
+    "description": {
+      "en": "Free primary health care and community programs for people who face barriers to care.",
+      "fr": "Soins de santé primaires gratuits et programmes communautaires pour les personnes qui ont du mal à accéder aux soins."
+    },
+    "eligibility": {
+      "en": "Varies by program. Serves people with low incomes, newcomers and people with complex health needs.",
+      "fr": "Varie selon le programme. Dessert les personnes à faible revenu, les nouveaux arrivants et les personnes ayant des besoins de santé complexes."
+    },
     "address": "659 Dundas St, London, ON N5W 2Z1",
-    "hours": "Clinic Mon, Tue, Thu 9 am–4 pm; Wed 9 am–6 pm; Fri 9 am–12 pm",
+    "hours": {
+      "mon": [
+        "09:00-16:00"
+      ],
+      "tue": [
+        "09:00-16:00"
+      ],
+      "thu": [
+        "09:00-16:00"
+      ],
+      "wed": [
+        "09:00-18:00"
+      ],
+      "fri": [
+        "09:00-12:00"
+      ]
+    },
+    "hoursNote": {
+      "en": "Clinic hours. The office is open Mon–Fri, 9 am–4 pm.",
+      "fr": "Heures de la clinique. Le bureau est ouvert du lundi au vendredi, de 9 h à 16 h."
+    },
     "phone": "519-660-0874",
     "website": "https://lihc.on.ca",
-    "tags": [
-      "doctor",
-      "nurse",
-      "primary care",
-      "clinic",
-      "newcomers",
-      "low income"
-    ],
+    "tags": {
+      "en": [
+        "doctor",
+        "nurse",
+        "primary care",
+        "clinic",
+        "newcomers",
+        "low income"
+      ],
+      "fr": [
+        "médecin",
+        "infirmière",
+        "soins primaires",
+        "clinique",
+        "nouveaux arrivants",
+        "faible revenu"
+      ]
+    },
     "source": "https://www.informationlondon.ca/Services/Basic_Needs/Display/12102/London_InterCommunity_Health_Centre",
     "lastChecked": "2026-09-23",
     "lat": 42.989247,
@@ -187,21 +425,58 @@
     "id": "middlesex-london-health-unit",
     "name": "Middlesex-London Health Unit",
     "category": "health",
-    "description": "Public health services, including vaccinations, sexual health, dental health and prenatal programs. Most programs are free.",
-    "eligibility": "Varies by service.",
+    "description": {
+      "en": "Public health services, including vaccinations, sexual health, dental health and prenatal programs. Most programs are free.",
+      "fr": "Services de santé publique, dont la vaccination, la santé sexuelle, la santé dentaire et les programmes prénataux. La plupart des programmes sont gratuits."
+    },
+    "eligibility": {
+      "en": "Varies by service.",
+      "fr": "Varie selon le service."
+    },
     "address": "355 Wellington St, Suite 110 (Citi Plaza), London, ON N6A 3N7",
-    "hours": "Office Mon–Fri 8:30 am–4:30 pm",
+    "hours": {
+      "mon": [
+        "08:30-16:30"
+      ],
+      "tue": [
+        "08:30-16:30"
+      ],
+      "wed": [
+        "08:30-16:30"
+      ],
+      "thu": [
+        "08:30-16:30"
+      ],
+      "fri": [
+        "08:30-16:30"
+      ]
+    },
+    "hoursNote": {
+      "en": "Office hours. Clinic times vary, so call ahead.",
+      "fr": "Heures du bureau. Les heures des cliniques varient; appelez avant de vous déplacer."
+    },
     "phone": "519-663-5317",
     "website": "https://www.healthunit.com",
-    "tags": [
-      "vaccines",
-      "immunization",
-      "sexual health",
-      "birth control",
-      "dental",
-      "prenatal",
-      "public health"
-    ],
+    "tags": {
+      "en": [
+        "vaccines",
+        "immunization",
+        "sexual health",
+        "birth control",
+        "dental",
+        "prenatal",
+        "public health"
+      ],
+      "fr": [
+        "vaccins",
+        "vaccination",
+        "santé sexuelle",
+        "contraception",
+        "dentaire",
+        "prénatal",
+        "santé publique"
+      ]
+    },
     "source": "https://www.informationlondon.ca/services/groups/display/13785/london_health_unit",
     "lastChecked": "2026-09-23",
     "lat": 42.98333,
@@ -211,20 +486,52 @@
     "id": "soahac-london",
     "name": "Southwest Ontario Aboriginal Health Access Centre (SOAHAC)",
     "category": "health",
-    "description": "Free health care that brings together traditional healing and Western medicine.",
-    "eligibility": "Indigenous community members.",
+    "description": {
+      "en": "Free health care that brings together traditional healing and Western medicine.",
+      "fr": "Soins de santé gratuits qui allient la guérison traditionnelle et la médecine occidentale."
+    },
+    "eligibility": {
+      "en": "Indigenous community members.",
+      "fr": "Membres des communautés autochtones."
+    },
     "address": "493 Dundas St, London, ON N6B 1W4",
-    "hours": "Mon–Fri 8:30 am–4:30 pm",
+    "hours": {
+      "mon": [
+        "08:30-16:30"
+      ],
+      "tue": [
+        "08:30-16:30"
+      ],
+      "wed": [
+        "08:30-16:30"
+      ],
+      "thu": [
+        "08:30-16:30"
+      ],
+      "fri": [
+        "08:30-16:30"
+      ]
+    },
     "phone": "519-672-4079",
     "website": "https://soahac.on.ca",
-    "tags": [
-      "Indigenous",
-      "First Nations",
-      "Métis",
-      "Inuit",
-      "primary care",
-      "traditional healing"
-    ],
+    "tags": {
+      "en": [
+        "Indigenous",
+        "First Nations",
+        "Métis",
+        "Inuit",
+        "primary care",
+        "traditional healing"
+      ],
+      "fr": [
+        "Autochtones",
+        "Premières Nations",
+        "Métis",
+        "Inuit",
+        "soins primaires",
+        "guérison traditionnelle"
+      ]
+    },
     "source": "https://www.informationlondon.ca/Services/other/Display/12153/Southwest_Ontario_Aboriginal_Health_Access_Centre",
     "lastChecked": "2026-09-23",
     "lat": 42.987423,
@@ -234,20 +541,36 @@
     "id": "cmha-crisis-centre",
     "name": "CMHA Thames Valley Crisis Centre",
     "category": "mental-health",
-    "description": "Mental health and addictions crisis support, assessment and crisis response, available day and night.",
-    "eligibility": "People experiencing a mental health or addictions crisis.",
+    "description": {
+      "en": "Mental health and addictions crisis support, assessment and crisis response, available day and night.",
+      "fr": "Soutien en cas de crise de santé mentale ou de dépendance, évaluation et intervention d’urgence, offerts jour et nuit."
+    },
+    "eligibility": {
+      "en": "People experiencing a mental health or addictions crisis.",
+      "fr": "Personnes qui vivent une crise de santé mentale ou de dépendance."
+    },
     "address": "648 Huron St, London, ON N6B 1Y6",
-    "hours": "Open 24 hours, every day",
+    "hours": "always",
     "phone": "519-434-9191",
     "website": "https://cmhatv.ca",
-    "tags": [
-      "crisis",
-      "mental health",
-      "addiction",
-      "24/7",
-      "support line",
-      "counselling"
-    ],
+    "tags": {
+      "en": [
+        "crisis",
+        "mental health",
+        "addiction",
+        "24/7",
+        "support line",
+        "counselling"
+      ],
+      "fr": [
+        "crise",
+        "santé mentale",
+        "dépendance",
+        "24/7",
+        "ligne d’écoute",
+        "counseling"
+      ]
+    },
     "source": "https://informationlondon.ca/Services/Display/154478/CMHA_Thames_Valley_Addiction_and_Mental_Health_Services_-_London_Crisis_Centre",
     "lastChecked": "2026-09-23",
     "lat": 43.012408,
@@ -257,21 +580,54 @@
     "id": "family-service-thames-valley",
     "name": "Family Service Thames Valley",
     "category": "mental-health",
-    "description": "One-on-one, family and group counselling, including single-session counselling. Fees are on a sliding scale.",
-    "eligibility": "Single-session counselling is for people 16 and older.",
+    "description": {
+      "en": "One-on-one, family and group counselling, including single-session counselling. Fees are on a sliding scale.",
+      "fr": "Counseling individuel, familial et de groupe, y compris des séances uniques. Les frais sont établis selon une échelle mobile."
+    },
+    "eligibility": {
+      "en": "Single-session counselling is for people 16 and older.",
+      "fr": "Les séances uniques de counseling s’adressent aux personnes de 16 ans et plus."
+    },
     "address": "500 South St, Suite 2, London, ON N6B 1C3",
-    "hours": "Mon, Tue, Thu 9 am–8 pm; Wed 9 am–5 pm; Fri 9 am–4 pm",
+    "hours": {
+      "mon": [
+        "09:00-20:00"
+      ],
+      "tue": [
+        "09:00-20:00"
+      ],
+      "thu": [
+        "09:00-20:00"
+      ],
+      "wed": [
+        "09:00-17:00"
+      ],
+      "fri": [
+        "09:00-16:00"
+      ]
+    },
     "phone": "519-433-0183",
     "website": "https://www.fstv.ca",
-    "tags": [
-      "counselling",
-      "therapy",
-      "anxiety",
-      "depression",
-      "grief",
-      "sliding scale",
-      "families"
-    ],
+    "tags": {
+      "en": [
+        "counselling",
+        "therapy",
+        "anxiety",
+        "depression",
+        "grief",
+        "sliding scale",
+        "families"
+      ],
+      "fr": [
+        "counseling",
+        "thérapie",
+        "anxiété",
+        "dépression",
+        "deuil",
+        "échelle mobile",
+        "familles"
+      ]
+    },
     "source": "https://www.informationlondon.ca/services/groups/display/12050/family_service_thames_valley",
     "lastChecked": "2026-09-23",
     "lat": 42.978087,
@@ -281,21 +637,57 @@
     "id": "lpl-central",
     "name": "London Public Library: Central Library",
     "category": "community",
-    "description": "Free Wi-Fi, computers, study space and programs for all ages. Get two hours of free parking at Citi Plaza with a voucher from the main desk.",
-    "eligibility": "Everyone.",
+    "description": {
+      "en": "Free Wi-Fi, computers, study space and programs for all ages. Get two hours of free parking at Citi Plaza with a voucher from the main desk.",
+      "fr": "Wi-Fi gratuit, ordinateurs, espaces d’étude et programmes pour tous les âges. Obtenez deux heures de stationnement gratuit au Citi Plaza avec un bon remis au comptoir principal."
+    },
+    "eligibility": {
+      "en": "Everyone.",
+      "fr": "Tout le monde."
+    },
     "address": "251 Dundas St, London, ON N6A 6H9",
-    "hours": "Mon–Thu 9 am–9 pm; Fri 9 am–6 pm; Sat 9 am–5 pm; Sun closed",
+    "hours": {
+      "mon": [
+        "09:00-21:00"
+      ],
+      "tue": [
+        "09:00-21:00"
+      ],
+      "wed": [
+        "09:00-21:00"
+      ],
+      "thu": [
+        "09:00-21:00"
+      ],
+      "fri": [
+        "09:00-18:00"
+      ],
+      "sat": [
+        "09:00-17:00"
+      ]
+    },
     "phone": "519-661-4600",
     "website": "https://www.lpl.ca",
-    "tags": [
-      "library",
-      "wifi",
-      "internet",
-      "computers",
-      "study space",
-      "books",
-      "programs"
-    ],
+    "tags": {
+      "en": [
+        "library",
+        "wifi",
+        "internet",
+        "computers",
+        "study space",
+        "books",
+        "programs"
+      ],
+      "fr": [
+        "bibliothèque",
+        "wifi",
+        "internet",
+        "ordinateurs",
+        "espace d’étude",
+        "livres",
+        "programmes"
+      ]
+    },
     "source": "https://www.lpl.ca/using-library/hours-locations",
     "lastChecked": "2026-09-23",
     "lat": 42.984615,
@@ -305,20 +697,52 @@
     "id": "lpl-crouch",
     "name": "London Public Library: Crouch Library",
     "category": "community",
-    "description": "Neighbourhood library in east London with free Wi-Fi, computers and programs.",
-    "eligibility": "Everyone.",
+    "description": {
+      "en": "Neighbourhood library in east London with free Wi-Fi, computers and programs.",
+      "fr": "Bibliothèque de quartier dans l’est de London, avec Wi-Fi gratuit, ordinateurs et programmes."
+    },
+    "eligibility": {
+      "en": "Everyone.",
+      "fr": "Tout le monde."
+    },
     "address": "550 Hamilton Rd, London, ON N5Z 1S4",
-    "hours": "Tue–Thu 9 am–9 pm; Fri 10 am–6 pm; Sat 9 am–5 pm; Sun–Mon closed",
+    "hours": {
+      "tue": [
+        "09:00-21:00"
+      ],
+      "wed": [
+        "09:00-21:00"
+      ],
+      "thu": [
+        "09:00-21:00"
+      ],
+      "fri": [
+        "10:00-18:00"
+      ],
+      "sat": [
+        "09:00-17:00"
+      ]
+    },
     "phone": "519-673-0111",
     "website": "https://www.lpl.ca",
-    "tags": [
-      "library",
-      "wifi",
-      "internet",
-      "computers",
-      "books",
-      "programs"
-    ],
+    "tags": {
+      "en": [
+        "library",
+        "wifi",
+        "internet",
+        "computers",
+        "books",
+        "programs"
+      ],
+      "fr": [
+        "bibliothèque",
+        "wifi",
+        "internet",
+        "ordinateurs",
+        "livres",
+        "programmes"
+      ]
+    },
     "source": "https://www.lpl.ca/using-library/hours-locations",
     "lastChecked": "2026-09-23",
     "lat": 42.980693,
@@ -328,21 +752,54 @@
     "id": "lpl-masonville",
     "name": "London Public Library: Masonville Library",
     "category": "community",
-    "description": "Library near Western University with free Wi-Fi, computers and study space.",
-    "eligibility": "Everyone.",
+    "description": {
+      "en": "Library near Western University with free Wi-Fi, computers and study space.",
+      "fr": "Bibliothèque près de l’Université Western avec Wi-Fi gratuit, ordinateurs et espaces d’étude."
+    },
+    "eligibility": {
+      "en": "Everyone.",
+      "fr": "Tout le monde."
+    },
     "address": "30 North Centre Rd, London, ON N5X 3W1",
-    "hours": "Tue–Thu 9 am–9 pm; Fri 10 am–6 pm; Sat 9 am–5 pm; Sun–Mon closed",
+    "hours": {
+      "tue": [
+        "09:00-21:00"
+      ],
+      "wed": [
+        "09:00-21:00"
+      ],
+      "thu": [
+        "09:00-21:00"
+      ],
+      "fri": [
+        "10:00-18:00"
+      ],
+      "sat": [
+        "09:00-17:00"
+      ]
+    },
     "phone": "519-660-4646",
     "website": "https://www.lpl.ca",
-    "tags": [
-      "library",
-      "wifi",
-      "internet",
-      "computers",
-      "study space",
-      "books",
-      "students"
-    ],
+    "tags": {
+      "en": [
+        "library",
+        "wifi",
+        "internet",
+        "computers",
+        "study space",
+        "books",
+        "students"
+      ],
+      "fr": [
+        "bibliothèque",
+        "wifi",
+        "internet",
+        "ordinateurs",
+        "espace d’étude",
+        "livres",
+        "étudiants"
+      ]
+    },
     "source": "https://www.lpl.ca/using-library/hours-locations",
     "lastChecked": "2026-09-23",
     "lat": 43.025239,
@@ -352,21 +809,40 @@
     "id": "cross-cultural-learner-centre",
     "name": "London Cross Cultural Learner Centre",
     "category": "community",
-    "description": "Settlement help for newcomers and refugees, including housing, jobs, school, language assessment, interpretation and community connections. Services in English and many other languages.",
-    "eligibility": "Newcomers to Canada, including refugees.",
+    "description": {
+      "en": "Settlement help for newcomers and refugees, including housing, jobs, school, language assessment, interpretation and community connections. Services in English and many other languages.",
+      "fr": "Aide à l’établissement pour les nouveaux arrivants et les réfugiés : logement, emploi, école, évaluation linguistique, interprétation et liens avec la communauté. Services en anglais et dans de nombreuses autres langues."
+    },
+    "eligibility": {
+      "en": "Newcomers to Canada, including refugees.",
+      "fr": "Nouveaux arrivants au Canada, y compris les réfugiés."
+    },
     "address": "505 Dundas St, London, ON N6B 1W4",
+    "hours": null,
     "phone": "519-432-1133",
     "website": "https://www.lcclc.org",
-    "tags": [
-      "newcomers",
-      "refugees",
-      "immigrants",
-      "settlement",
-      "language",
-      "interpretation",
-      "jobs",
-      "housing help"
-    ],
+    "tags": {
+      "en": [
+        "newcomers",
+        "refugees",
+        "immigrants",
+        "settlement",
+        "language",
+        "interpretation",
+        "jobs",
+        "housing help"
+      ],
+      "fr": [
+        "nouveaux arrivants",
+        "réfugiés",
+        "immigrants",
+        "établissement",
+        "langue",
+        "interprétation",
+        "emploi",
+        "logement"
+      ]
+    },
     "source": "https://www.informationlondon.ca/Services/Basic_Needs/Display/13506/London_Cross_Cultural_Learner_Centre_CCLC",
     "lastChecked": "2026-09-23",
     "lat": 42.98755,
@@ -376,24 +852,59 @@
     "id": "youth-action-centre",
     "name": "Youth Action Centre (Youth Opportunities Unlimited)",
     "category": "community",
-    "description": "Drop-in with bagged lunches, hot dinners, an emergency food bank, laundry, showers, hygiene and baby supplies, and help finding housing.",
-    "eligibility": "Youth 16–24 experiencing or at risk of homelessness.",
+    "description": {
+      "en": "Drop-in with bagged lunches, hot dinners, an emergency food bank, laundry, showers, hygiene and baby supplies, and help finding housing.",
+      "fr": "Centre d’accueil offrant des dîners emballés, des soupers chauds, une banque alimentaire d’urgence, une buanderie, des douches, des articles d’hygiène et pour bébés, et de l’aide à la recherche de logement."
+    },
+    "eligibility": {
+      "en": "Youth 16–24 experiencing or at risk of homelessness.",
+      "fr": "Jeunes de 16 à 24 ans en situation d’itinérance ou à risque de l’être."
+    },
     "address": "332 Richmond St, London, ON N6A 3C3",
-    "hours": "Mon–Fri 10 am–6 pm",
+    "hours": {
+      "mon": [
+        "10:00-18:00"
+      ],
+      "tue": [
+        "10:00-18:00"
+      ],
+      "wed": [
+        "10:00-18:00"
+      ],
+      "thu": [
+        "10:00-18:00"
+      ],
+      "fri": [
+        "10:00-18:00"
+      ]
+    },
     "phone": "519-432-1112 ext. 101",
     "website": "https://www.you.ca",
-    "tags": [
-      "youth",
-      "meals",
-      "lunch",
-      "dinner",
-      "food bank",
-      "laundry",
-      "showers",
-      "diapers",
-      "housing help",
-      "YOU"
-    ],
+    "tags": {
+      "en": [
+        "youth",
+        "meals",
+        "lunch",
+        "dinner",
+        "food bank",
+        "laundry",
+        "showers",
+        "diapers",
+        "housing help",
+        "YOU"
+      ],
+      "fr": [
+        "jeunes",
+        "repas",
+        "dîner",
+        "souper",
+        "banque alimentaire",
+        "buanderie",
+        "douches",
+        "couches",
+        "logement"
+      ]
+    },
     "source": "https://www.informationlondon.ca/Services/Display/15358/Youth_Action_Centre_The",
     "lastChecked": "2026-09-23",
     "lat": 42.98151,

@@ -1,17 +1,21 @@
+import { useLanguage } from '../i18n/LanguageContext.jsx'
+
 export default function HelpBanner() {
+  const { t } = useLanguage()
+
   return (
-    <aside className="help-banner" aria-label="Urgent help">
+    <aside className="help-banner" aria-label={t.helpLabel}>
       <p>
         <span>
-          <strong>Emergency:</strong> call <a href="tel:911">911</a>
+          <strong>{t.emergency}</strong> {t.call} <a href="tel:911">911</a>
         </span>
         <span>
-          <strong>Crisis support:</strong> call or text <a href="tel:988">988</a>
+          <strong>{t.crisis}</strong> {t.callOrText} <a href="tel:988">988</a>
         </span>
         <span>
-          <strong>Other services:</strong> call <a href="tel:211">211</a> or visit{' '}
+          <strong>{t.otherServices}</strong> {t.call} <a href="tel:211">211</a> {t.orVisit}{' '}
           <a href="https://211ontario.ca" target="_blank" rel="noreferrer">
-            211ontario.ca<span className="visually-hidden"> (opens in a new tab)</span>
+            211ontario.ca<span className="visually-hidden">{t.newTabGeneric}</span>
           </a>
         </span>
       </p>

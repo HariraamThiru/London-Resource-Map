@@ -1,3 +1,5 @@
+export const REPO_URL = 'https://github.com/HariraamThiru/london-resource-map'
+
 export function directionsUrl(address) {
   return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`
 }
@@ -8,11 +10,18 @@ export function phoneHref(phone) {
   return `tel:${mainNumber.replace(/[^\d+]/g, '')}`
 }
 
-export function formatDate(isoDate) {
-  // Noon avoids the date shifting by a day in time zones behind UTC.
-  return new Date(`${isoDate}T12:00:00`).toLocaleDateString('en-CA', {
-    month: 'short',
-    day: 'numeric',
-    year: 'numeric',
+// Opens the "Suggest an update" form (.github/ISSUE_TEMPLATE/suggest-update.yml)
+// with the service's name already filled in.
+export function suggestUpdateUrl(resource) {
+  const params = new URLSearchParams({
+    template: 'suggest-update.yml',
+    title: `Update: ${resource.name}`,
+    service: resource.name,
   })
+  return `${REPO_URL}/issues/new?${params}`
+}
+
+export function suggestServiceUrl() {
+  const params = new URLSearchParams({ template: 'suggest-update.yml', title: 'New service: ' })
+  return `${REPO_URL}/issues/new?${params}`
 }

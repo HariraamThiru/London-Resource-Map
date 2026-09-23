@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
-import { CircleMarker, MapContainer, Popup, TileLayer, useMap } from 'react-leaflet'
+import { CircleMarker, MapContainer, Popup, TileLayer, Tooltip, useMap } from 'react-leaflet'
+import { useLanguage } from '../i18n/LanguageContext.jsx'
 import { CATEGORY_BY_ID } from '../lib/categories.js'
+import OpenStatus from './OpenStatus.jsx'
 import ResourceDetails from './ResourceDetails.jsx'
 
 // When a service is picked from the list, fly the map to it and open its popup.
@@ -20,7 +22,33 @@ function FlyToSelection({ selection, markerRefs }) {
   return null
 }
 
-export default function ResourceMap({ resources, selection, onSelect }) {
+// When "Near me" turns on, zoom to show the visitor and their closest services together.
+function FitToVisitor({ position, nearest }) {
+  const map = useMap()
+  // `nearest` is a new array on every render, so the effect watches the ids inside it.
+  // Otherwise the map would jump back every minute when "Open now" refreshes.
+  const nearestIds = nearest.map((resource) => resource.id).join()
+
+  useEffect(() => {
+    if (!position || nearest.length === 0) return
+    map.flyToBounds(
+      [[position.lat, position.lng], ...nearest.map((resource) => [resource.lat, resource.lng])],
+      { padding: [40, 40], maxZoom: 15, duration: 0.8 },
+    )
+  }, [map, position, nearestIds])
+
+  return null
+}
+
+export default function ResourceMap({
+  resources,
+  selection,
+  onSelect,
+  now,
+  visitorPosition,
+  nearestToVisitor,
+}) {
+  const { t } = useLanguage()
   const markerRefs = useRef(new Map())
   // Start zoomed to fit every service. Later filtering doesn't move the map.
   const [initialBounds] = useState(() => resources.map((resource) => [resource.lat, resource.lng]))
@@ -54,13 +82,28 @@ export default function ResourceMap({ resources, selection, onSelect }) {
             {/* Extra top-left padding keeps popups clear of the zoom buttons. */}
             <Popup autoPanPaddingTopLeft={[50, 12]}>
               <strong className="popup__title">{resource.name}</strong>
-              <span className="popup__category">{category.label}</span>
+              <span className="popup__meta">
+                {t.categories[resource.category]}
+                <OpenStatus hours={resource.hours} now={now} />
+              </span>
               <ResourceDetails resource={resource} />
             </Popup>
           </CircleMarker>
         )
       })}
+      {visitorPosition && (
+        <CircleMarker
+          center={[visitorPosition.lat, visitorPosition.lng]}
+          radius={8}
+          pathOptions={{ color: '#ffffff', weight: 3, fillColor: '#111827', fillOpacity: 1 }}
+        >
+          <Tooltip direction="top" offset={[0, -10]} permanent>
+            {t.youAreHere}
+          </Tooltip>
+        </CircleMarker>
+      )}
       <FlyToSelection selection={selection} markerRefs={markerRefs} />
+      <FitToVisitor position={visitorPosition} nearest={nearestToVisitor} />
     </MapContainer>
   )
 }

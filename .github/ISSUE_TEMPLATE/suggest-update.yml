@@ -1,0 +1,42 @@
+name: Suggest an update
+description: Report a change to a service's details, or suggest a service to add.
+title: "Update: "
+labels: ["data update"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping keep the London Resource Map accurate. Everything you write here is public, so please don't include personal information about yourself or anyone else.
+  - type: input
+    id: service
+    attributes:
+      label: Service
+      description: Which service is this about? For a new service, enter its name.
+    validations:
+      required: true
+  - type: dropdown
+    id: change
+    attributes:
+      label: What's changed?
+      options:
+        - Hours
+        - Address or phone number
+        - Description or who it's for
+        - The service has closed
+        - New service to add
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What should the listing say?
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Where can this be confirmed?
+      description: A link to the organization's website or another public source.
+      placeholder: https://
